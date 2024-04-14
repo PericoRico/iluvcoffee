@@ -8,7 +8,10 @@ async function bootstrap() {
     {
       whitelist: true,
       transform: true,
-      forbidNonWhitelisted: true
+      forbidNonWhitelisted: true,
+      transformOptions: {
+        enableImplicitConversion: true //Con esto no hace falta decorar con type los DTO
+      }
     }
   ));
   await app.listen(3000);
