@@ -32,6 +32,8 @@ Todos deben tener un metodo up y down
 lugo hace el build y aplica la migracion con
 npx typeorm migration:run -d dist/typeorm-cli.config
 
+npx typeorm migration:revert -d dist/typeorm-cli.config
+
 tambien crea automaticamente el archivo
 npx typeorm migration:generate src/migrations/SchemaSync -d dist/typeorm-cli.config
 
