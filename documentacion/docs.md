@@ -90,3 +90,34 @@ Hay otros scopes como:
 Si el servcie es scope.request, el contorller aunque no lo especifiques tambien lo es porque lo necesita
 Los providers request-scoped pueden injectar el objeto "original" de la RQ (headers, cookies, IPs..)
 Se recomeinda el singleton porque este baja el rendimiento.
+
+
+# Capitulo 4
+
+## env
+valdiar las variables
+
+npm install @hapi/joi
+npm install --save-dev @types/hapi__joi
+
+luego pone
+
+import * as Joi from '@hapi/joi';
+
+ConfigModule.forRoot({
+  validationSchema: Joi.object({
+    DATABASE_HOST: Joi.required(),
+    DATABASE_PORT: Joi.number().default(5432),
+  }),
+}),
+## mas complejo
+
+ crea el app.config como una factory
+
+ luego en el app module le pasa el load
+
+ ConfigModule.forRoot({
+      load: [appConfig], // 👈
+    }),
+
+
