@@ -92,7 +92,7 @@ Los providers request-scoped pueden injectar el objeto "original" de la RQ (head
 Se recomeinda el singleton porque este baja el rendimiento.
 
 
-# Capitulo 4
+# Capitulo 5
 
 ## env
 valdiar las variables
@@ -115,9 +115,13 @@ ConfigModule.forRoot({
  crea el app.config como una factory
 
  luego en el app module le pasa el load
-
+```
  ConfigModule.forRoot({
       load: [appConfig], // 👈
     }),
+```
 
 
+
+# Capitulo 6: Building Blocks
+ ver otro archivo
