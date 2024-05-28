@@ -21,7 +21,7 @@ async function bootstrap() {
   ));
   app.useGlobalFilters(new HttpExceptionFilter());
   app.useGlobalInterceptors(new WrapResponseInterceptor(), new TimeoutInterceptor);
-  //app.useGlobalGuards(new ApiKeyGuard()); no sep uede usar si tiene inyeccion de dependencias
+  //app.useGlobalGuards(new ApiKeyGuard()); //no sep uede usar si tiene inyeccion de dependencias
 
   const options = new DocumentBuilder()
     .setTitle('Iluvcoffe')
